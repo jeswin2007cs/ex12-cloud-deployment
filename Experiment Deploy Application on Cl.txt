@@ -1,0 +1,88 @@
+Experiment: Deploy Application on Cloud Platform
+
+Here are all the commands we used, in order.
+
+1. Go to the project folder
+cd "D:\New folder (3)\ex12"
+2. Create the Node.js project
+npm init -y
+3. Install Express
+npm install express
+4. Run and test locally
+npm start
+
+Alternatively, we could run:
+
+node server.js
+
+Then we tested:
+
+http://localhost:3000
+5. Reset Git because we wanted a clean Git setup
+Remove-Item -Recurse -Force .git -ErrorAction SilentlyContinue
+6. Prevent node_modules from uploading
+"node_modules/" | Out-File -Encoding ascii .gitignore
+7. Initialise Git
+git init
+8. Add project files
+git add .
+9. Commit the project
+git commit -m "Deploy application on cloud platform"
+10. Change the branch to main
+git branch -M main
+11. Connect your GitHub repository
+git remote add origin https://github.com/jeswin2007cs/ex12-cloud-deployment.git
+12. Check the GitHub connection
+git remote -v
+13. We had a GitHub authentication problem, so we used
+git config --global credential.helper manager
+
+Then:
+
+cmdkey /delete:LegacyGeneric:target=git:https://github.com
+14. Upload the project to GitHub
+git push -u origin main
+
+After signing in to GitHub, the project was uploaded.
+
+15. Render commands/settings
+
+On Render, we didn't use PowerShell commands. We configured:
+
+Build Command:
+npm install
+
+Start Command:
+node server.js
+
+We selected:
+
+Instance Type: Free
+
+Then:
+
+Deploy Web Service
+
+Complete command sequence
+
+For your lab record, these are the main commands worth writing:
+
+cd "D:\New folder (3)\ex12"
+
+npm init -y
+npm install express
+npm start
+
+git init
+git add .
+git commit -m "Deploy application on cloud platform"
+git branch -M main
+
+git remote add origin https://github.com/jeswin2007cs/ex12-cloud-deployment.git
+
+git push -u origin main
+
+And on Render:
+
+Build Command : npm install
+Start Command : node server.js

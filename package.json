@@ -12,5 +12,14 @@
   "description": "",
   "dependencies": {
     "express": "^5.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeswin2007cs/ex12-cloud-deployment.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jeswin2007cs/ex12-cloud-deployment/issues"
+  },
+  "homepage": "https://github.com/jeswin2007cs/ex12-cloud-deployment#readme"
 }
